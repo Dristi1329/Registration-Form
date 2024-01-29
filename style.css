@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: url('c.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+    background-size: cover;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: ;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 1000;
+    position: relative;
+    color: white;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: url('1.avif');
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    color: aliceblue;
+}
+form .user-details .input-box{
+    width: calc(100%/2-20px);
+
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width:2px ;
+    transition: all 0.4s ease;
+}
+.user-details .input-box input:focus,.user-details .input-box input:valid{
+    border-color: red;
+}
+/* Style for the submit button */
+.container form input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Style for the reset button */
+.container form input[type="reset"] {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+
+/* Style for user-details container */
+.container form .user-details {
+    display: flex;
+    flex-direction: column; /* Change flex direction to column */
+    margin: 20px 0 12px 0;
+}
+
+/* Style for each input-box */
+form .user-details .input-box {
+    width: 100%; /* Set width to 100% for full width */
+    margin-bottom: 15px; /* Add margin between input boxes */
+}
+@media only screen and (max-width: 600px) {
+    .user-details .input-box {
+        width: 100%;
+    }
+}
+
